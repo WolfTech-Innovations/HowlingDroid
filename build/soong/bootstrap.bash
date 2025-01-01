@@ -68,31 +68,16 @@ function modify_xml_files() {
     echo "'Android' has been successfully replaced with 'WTRP' in all relevant XML files."  # Success message
 }
 
-# Step 4: Setting up the build environment — configuring everything for the build
-function setup_build_environment() {
-    echo "Step 4: Setting up the build environment..."  # Introduction to build setup
-    echo "We now need to configure the build environment to ensure everything is ready for the build process."
-    echo "This step is crucial to avoid any configuration issues during the actual build."
-
-    export ALLOW_MISSING_DEPENDENCIES=true  # Allow missing dependencies (just in case)
-    . build/envsetup.sh  # Source the Android build environment setup script
-    echo "Build environment set up successfully! We're now ready to proceed to the next step."
-}
-
 # Step 5: Selecting the target device configuration
 function select_device_configuration() {
-    echo "Step 5: Selecting the target device configuration..."  # Inform the user of the next step
+    echo "Step 4: Selecting the target device configuration..."  # Inform the user of the next step
     echo "In this step, we specify which device we want to build the TWRP recovery image for."
-    echo "We will be targeting the 'TWRP_cm_generic' configuration. This is a generic configuration"
-    echo "suitable for a variety of devices that support TWRP."
-
-    lunch twrp_generic-eng  # Select the configuration for the target device
-    echo "Target device 'TWRP_cm_generic-eng' selected successfully! On to the next step."
+   export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_arm64-eng
 }
 
 # Step 6: Building the recovery image
 function build_recovery_image() {
-    echo "Step 6: Building the recovery image..."  # Notify the user of the build process
+    echo "Step 5: Building the recovery image..."  # Notify the user of the build process
     echo "The heart of the process! We will now compile the source code into a working TWRP recovery image."
     echo "This might take a while, depending on your system's performance."
 
@@ -102,7 +87,7 @@ function build_recovery_image() {
 
 # Step 7: Preparing the output directory — keeping things organized
 function prepare_output_directory() {
-    echo "Step 7: Preparing the output directory..."  # Preparation message
+    echo "Step 6: Preparing the output directory..."  # Preparation message
     echo "We're about to create a dedicated directory where the final recovery image will be stored."
     echo "Having a clean output folder helps keep things neat and easy to find."
 
@@ -112,7 +97,7 @@ function prepare_output_directory() {
 
 # Step 8: Moving the recovery image to the output directory
 function move_recovery_image() {
-    echo "Step 8: Moving the recovery image to the output directory..."  # Notify of file move action
+    echo "Step 7: Moving the recovery image to the output directory..."  # Notify of file move action
     echo "Now, we'll move the freshly built recovery image to the 'output' directory."
     echo "This makes it easier to locate and flash the image to your device."
 
@@ -159,9 +144,6 @@ sync_repositories  # Sync the required repositories from GitHub
 display_progress  # Display progress bar for this step
 
 modify_xml_files  # Modify XML files as needed
-display_progress  # Display progress bar for this step
-
-setup_build_environment  # Set up the Android build environment
 display_progress  # Display progress bar for this step
 
 select_device_configuration  # Choose the target device for the build
