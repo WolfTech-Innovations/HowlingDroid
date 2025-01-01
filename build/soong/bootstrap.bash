@@ -33,7 +33,7 @@ function install_repo() {
 # Step 2: Syncing repositories with a stable, generic manifest
 function sync_repositories() {
     echo "Step 2: Syncing repositories..."
-    repo init -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
+    repo init -u git://github.com/TeamExyKings/twrp_minimal_manifest.git -b lineage-15.1
     echo "Repo initialization complete."
     repo sync --force-sync --no-tags --no-clone-bundle
     echo "Repositories synchronized successfully!"
@@ -71,13 +71,13 @@ function select_device_configuration() {
     echo "Step 6: Selecting the target device configuration..."
     export ALLOW_MISSING_DEPENDENCIES=true
     sudo ./build/envsetup.sh
-    lunch omni_arm64-eng
+    lunch lineage_arm64-eng
 }
 
 # Step 7: Building the recovery image
 function build_recovery_image() {
     echo "Step 7: Building the recovery image..."
-    sudo mka recoveryimage
+    sudo make recoveryimage
     echo "Build completed! The recovery image has been successfully generated."
 }
 
