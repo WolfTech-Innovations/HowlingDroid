@@ -1,0 +1,112 @@
+PID: 5804 START: 1735699044886746624 :+++++++++++++++NEW COMMAND+++++++++++++++++++ starting new command: init, --depth=1, -u, https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git, -b, twrp-9.0 [sid=repo-20250101T023722Z-P000016ac/repo-20250101T023724Z-P000016ac]
+
+PID: 5804 START: 1735699044905189632 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'init'] with debug: : export GIT_DIR=/workspaces/WTRP/.repo/manifests.git
+: git init 1>| 2>|
+
+PID: 5804 END: 1735699044911763200 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'init'] with debug: : export GIT_DIR=/workspaces/WTRP/.repo/manifests.git
+: git init 1>| 2>|
+
+PID: 5804 START: 1735699044913134848 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--null', '--list'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --null --list 1>| 2>|
+
+PID: 5804 END: 1735699044916761344 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--null', '--list'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --null --list 1>| 2>|
+
+PID: 5804 START: 1735699044917288448 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'filter.lfs.smudge', 'git-lfs smudge --skip -- %f'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all filter.lfs.smudge git-lfs smudge --skip -- %f 1>| 2>|
+
+PID: 5804 END: 1735699044921060608 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'filter.lfs.smudge', 'git-lfs smudge --skip -- %f'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all filter.lfs.smudge git-lfs smudge --skip -- %f 1>| 2>|
+
+PID: 5804 START: 1735699044921295360 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'filter.lfs.process', 'git-lfs filter-process --skip'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all filter.lfs.process git-lfs filter-process --skip 1>| 2>|
+
+PID: 5804 END: 1735699044925079808 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'filter.lfs.process', 'git-lfs filter-process --skip'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all filter.lfs.process git-lfs filter-process --skip 1>| 2>|
+
+PID: 5804 START: 1735699044925324544 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--unset-all', 'core.bare'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --unset-all core.bare 1>| 2>|
+
+PID: 5804 END: 1735699044929058816 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--unset-all', 'core.bare'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --unset-all core.bare 1>| 2>|
+
+PID: 5804 START: 1735699044929299968 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'repo.depth', '1'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all repo.depth 1 1>| 2>|
+
+PID: 5804 END: 1735699044933136640 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'repo.depth', '1'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all repo.depth 1 1>| 2>|
+
+PID: 5804 START: 1735699044933412864 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'remote.origin.url', 'https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all remote.origin.url https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git 1>| 2>|
+
+PID: 5804 END: 1735699044937150720 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'remote.origin.url', 'https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all remote.origin.url https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git 1>| 2>|
+
+PID: 5804 START: 1735699044937396736 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'remote.origin.fetch', '+refs/heads/*:refs/remotes/origin/*'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/* 1>| 2>|
+
+PID: 5804 END: 1735699044941373440 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'remote.origin.fetch', '+refs/heads/*:refs/remotes/origin/*'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/* 1>| 2>|
+
+PID: 5804 START: 1735699044941856000 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'manifest.platform', 'auto'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all manifest.platform auto 1>| 2>|
+
+PID: 5804 END: 1735699044947386112 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'manifest.platform', 'auto'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all manifest.platform auto 1>| 2>|
+
+PID: 5804 START: 1735699044947759872 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'core.repositoryFormatVersion', '1'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all core.repositoryFormatVersion 1 1>| 2>|
+
+PID: 5804 END: 1735699044953187328 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'core.repositoryFormatVersion', '1'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all core.repositoryFormatVersion 1 1>| 2>|
+
+PID: 5804 START: 1735699044953484544 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'extensions.preciousObjects', 'true'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all extensions.preciousObjects true 1>| 2>|
+
+PID: 5804 END: 1735699044959168256 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/workspaces/WTRP/.repo/manifests.git/config', '--includes', '--replace-all', 'extensions.preciousObjects', 'true'] with debug: : git config --file /workspaces/WTRP/.repo/manifests.git/config --includes --replace-all extensions.preciousObjects true 1>| 2>|
+
+PID: 5804 START: 1735699044959701760 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'fetch', '--depth=1', '--quiet', 'origin', '--recurse-submodules=no', '--no-tags', '+refs/heads/twrp-9.0:refs/remotes/origin/twrp-9.0'] with debug: : export GIT_OBJECT_DIRECTORY=/workspaces/WTRP/.repo/manifests.git/objects
+: git fetch --depth=1 --quiet origin --recurse-submodules=no --no-tags +refs/heads/twrp-9.0:refs/remotes/origin/twrp-9.0 1>| 2>&1
+
+PID: 5804 END: 1735699045091895040 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'fetch', '--depth=1', '--quiet', 'origin', '--recurse-submodules=no', '--no-tags', '+refs/heads/twrp-9.0:refs/remotes/origin/twrp-9.0'] with debug: : export GIT_OBJECT_DIRECTORY=/workspaces/WTRP/.repo/manifests.git/objects
+: git fetch --depth=1 --quiet origin --recurse-submodules=no --no-tags +refs/heads/twrp-9.0:refs/remotes/origin/twrp-9.0 1>| 2>&1
+
+PID: 5804 START: 1735699045092204800 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'pack-refs', '--all', '--prune'] with debug: : git pack-refs --all --prune 1>| 2>|
+
+PID: 5804 END: 1735699045096973824 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'pack-refs', '--all', '--prune'] with debug: : git pack-refs --all --prune 1>| 2>|
+
+PID: 5804 START: 1735699045097534464 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'rev-parse', '--verify', 'refs/remotes/origin/twrp-9.0^0'] with debug: : git rev-parse --verify refs/remotes/origin/twrp-9.0^0 1>| 2>|
+
+PID: 5804 END: 1735699045101657856 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'rev-parse', '--verify', 'refs/remotes/origin/twrp-9.0^0'] with debug: : git rev-parse --verify refs/remotes/origin/twrp-9.0^0 1>| 2>|
+
+PID: 5804 START: 1735699045102434560 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'read-tree', '--reset', '-u', '-v', 'HEAD'] with debug: 
+: cd /workspaces/WTRP/.repo/manifests
+: git read-tree --reset -u -v HEAD 2>|
+
+PID: 5804 END: 1735699045108480000 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'read-tree', '--reset', '-u', '-v', 'HEAD'] with debug: 
+: cd /workspaces/WTRP/.repo/manifests
+: git read-tree --reset -u -v HEAD 2>|
+
+PID: 5804 START: 1735699045108589568 :: load refs /workspaces/WTRP/.repo/manifests.git
+
+PID: 5804 END: 1735699045108863744 :: load refs /workspaces/WTRP/.repo/manifests.git
+
+PID: 5804 START: 1735699045109171968 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'checkout', '-q', 'f3f57994a2aa2c92303df24bb01caff6850f7463', '--'] with debug: : git checkout -q f3f57994a2aa2c92303df24bb01caff6850f7463 -- 2>|
+
+PID: 5804 END: 1735699045114347264 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'checkout', '-q', 'f3f57994a2aa2c92303df24bb01caff6850f7463', '--'] with debug: : git checkout -q f3f57994a2aa2c92303df24bb01caff6850f7463 -- 2>|
+
+PID: 5804 START: 1735699045114586624 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'update-ref', '-d', 'refs/heads/default'] with debug: : git update-ref -d refs/heads/default 1>| 2>|
+
+PID: 5804 END: 1735699045119425024 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'update-ref', '-d', 'refs/heads/default'] with debug: : git update-ref -d refs/heads/default 1>| 2>|
+
+PID: 5804 START: 1735699045119676928 :: scan refs /workspaces/WTRP/.repo/manifests.git
+
+PID: 5804 END: 1735699045119772416 :: scan refs /workspaces/WTRP/.repo/manifests.git
+
+PID: 5804 START: 1735699045120026880 :: scan refs /workspaces/WTRP/.repo/manifests.git
+
+PID: 5804 END: 1735699045120111616 :: scan refs /workspaces/WTRP/.repo/manifests.git
+
+PID: 5804 START: 1735699045120387072 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'update-ref', 'refs/heads/default', 'f3f57994a2aa2c92303df24bb01caff6850f7463'] with debug: : git update-ref refs/heads/default f3f57994a2aa2c92303df24bb01caff6850f7463 1>| 2>|
+
+PID: 5804 END: 1735699045125559040 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'update-ref', 'refs/heads/default', 'f3f57994a2aa2c92303df24bb01caff6850f7463'] with debug: : git update-ref refs/heads/default f3f57994a2aa2c92303df24bb01caff6850f7463 1>| 2>|
+
+PID: 5804 START: 1735699045125851904 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'symbolic-ref', 'HEAD', 'refs/heads/default'] with debug: : git symbolic-ref HEAD refs/heads/default 1>| 2>|
+
+PID: 5804 END: 1735699045130906368 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'symbolic-ref', 'HEAD', 'refs/heads/default'] with debug: : git symbolic-ref HEAD refs/heads/default 1>| 2>|
+
+PID: 5804 START: 1735699045241368064 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'var', 'GIT_COMMITTER_IDENT'] with debug: : git var GIT_COMMITTER_IDENT 1>| 2>|
+
+PID: 5804 END: 1735699045245182976 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'var', 'GIT_COMMITTER_IDENT'] with debug: : git var GIT_COMMITTER_IDENT 1>| 2>|
+
+PID: 5804 START: 1735699051630157312 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/home/codespace/.gitconfig', '--includes', '--replace-all', 'color.ui', 'auto'] with debug: : git config --file /home/codespace/.gitconfig --includes --replace-all color.ui auto 1>| 2>|
+
+PID: 5804 END: 1735699051634501632 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--file', '/home/codespace/.gitconfig', '--includes', '--replace-all', 'color.ui', 'auto'] with debug: : git config --file /home/codespace/.gitconfig --includes --replace-all color.ui auto 1>| 2>|
+
+PID: 5804 START: 1735699051634903040 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--get', 'trace2.eventtarget'] with debug: : git config --get trace2.eventtarget 1>| 2>|
+
+PID: 5804 END: 1735699051638722304 :git command /workspaces/WTRP/.repo/manifests.git ['git', 'config', '--get', 'trace2.eventtarget'] with debug: : git config --get trace2.eventtarget 1>| 2>|
+
+PID: 5804 END: 1735699051638864640 :+++++++++++++++NEW COMMAND+++++++++++++++++++ starting new command: init, --depth=1, -u, https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git, -b, twrp-9.0 [sid=repo-20250101T023722Z-P000016ac/repo-20250101T023724Z-P000016ac]
+

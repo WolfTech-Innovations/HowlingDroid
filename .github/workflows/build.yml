@@ -1,0 +1,46 @@
+name: Build WTRP
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up dependencies
+      - name: Install build dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y \
+            git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev \
+            gcc-multilib g++-multilib lib32ncurses5-dev x11proto-core-dev libx11-dev \
+            lib32z1-dev libgl1-mesa-dev libxml2-utils python3 python3-pip openjdk-8-jdk-headless
+          
+      # Step 3: Set up environment variables (modify as needed for your build)
+      - name: Set up environment
+        run: |
+          echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" >> $GITHUB_ENV
+          echo "export PATH=$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin" >> $GITHUB_ENV
+
+      # Step 4: Run the build script
+      - name: Build WTRP
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      # Step 5: Archive the build output (if applicable)
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: WTRP-Build
+          path: output/
