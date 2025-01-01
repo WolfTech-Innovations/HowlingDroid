@@ -57,15 +57,6 @@ function modify_xml_files() {
 # Step 4: Auto-fixing redeclaration issues in Go files and linting
 function auto_fix_go_files() {
     echo "Step 4: Auto-fixing redeclaration issues in Go files..."
-    
-    # Lint and fix Go files
-    gofmt -w $(find . -name "*.go")  # Format Go files
-    golint $(find . -name "*.go") | grep -v 'should have comment' | grep -v 'exported' | grep -v 'package comment' | grep -v 'error return' | grep -v 'should not use underscores' | grep -v 'should not use mixed caps' | while read -r line; do
-        echo "Linting issue found: $line"
-        # Here you can add specific fixes based on the linting output if needed
-    done
-
-    # Example fix: Rename conflicting variables/methods
     find . -type f -name "*.go" -exec sed -i 's/eventEntry/eventEntryRenamed/g' {} +
     find . -type f -name "*.go" -exec sed -i 's/importEvents/importEventsRenamed/g' {} +
     echo "Auto-fix completed for redeclaration issues in Go files."
