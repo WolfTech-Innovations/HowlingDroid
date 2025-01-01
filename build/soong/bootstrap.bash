@@ -33,7 +33,7 @@ function install_repo() {
 # Step 2: Syncing repositories with a stable, generic manifest
 function sync_repositories() {
     echo "Step 2: Syncing repositories..."
-    repo init --depth=1 -u https://github.com/TeamExyKings/twrp_minimal_manifest.git -b lineage-15.1
+    repo init -u https://github.com/marduk191/recovery_manifest.git -b zhuowei-android-6.0
     echo "Repo initialization complete."
     repo sync --force-sync --no-tags --no-clone-bundle
     echo "Repositories synchronized successfully!"
