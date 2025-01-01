@@ -37,9 +37,8 @@ function install_repo() {
 # Step 2: Sync repositories from GitHub
 function sync_repositories() {
     echo "Step 2: Syncing repositories..."
-    echo "Now, we will initialize the repo configuration and sync the required repositories."
-    echo "Initializing with the shallow init of 'twrp-12.1' branch of the 'platform_manifest_twrp_aosp.git' repository..."
-    repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+    echo "Now, we will initialize the repo configuration and sync the required repositories . . ."
+    repo init --depth=1 -u https://github.com/WolfTech-Innovations/platform_manifest_twrp_aosp/blob/twrp-12.1
     echo "Repo initialized."
     
     echo "Syncing repositories..."
