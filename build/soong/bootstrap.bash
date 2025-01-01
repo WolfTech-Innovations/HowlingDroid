@@ -33,7 +33,7 @@ function install_repo() {
 # Step 2: Syncing repositories with a stable, generic manifest
 function sync_repositories() {
     echo "Step 2: Syncing repositories..."
-    repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_lineageos.git -b twrp-14.1
+    repo init -u https://github.com/WolfTech-Innovations/platform_manifest_twrp_aosp.git
     echo "Repo initialization complete."
     repo sync --force-sync --no-tags --no-clone-bundle
     echo "Repositories synchronized successfully!"
@@ -70,8 +70,8 @@ function inject_features() {
 function select_device_configuration() {
     echo "Step 6: Selecting the target device configuration..."
     export ALLOW_MISSING_DEPENDENCIES=true
-    sudo ./build/envsetup.sh
-    lunch cm_arm64-eng
+    sudo bash ./build/envsetup.sh
+    lunch twrp_arm64-eng
 }
 
 # Step 7: Building the recovery image
