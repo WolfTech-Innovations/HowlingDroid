@@ -41,7 +41,7 @@ jobs:
         run: |
           echo "Step 4: Starting the build process for WTRP..."
           chmod +x build.bash  # Make sure the build script is executable
-          ./build.bash  # Execute the build script for WTRP
+          sudo bash ./build.bash  # Execute the build script for WTRP
           echo "Build completed successfully."
 
       # Step 5: Archive the build output (recovery image, artifacts, etc.)
