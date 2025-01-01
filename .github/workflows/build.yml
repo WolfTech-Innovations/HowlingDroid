@@ -3,44 +3,51 @@ name: Build WTRP
 on:
   push:
     branches:
-      - main
+      - main  # Trigger the workflow on push to the main branch
   pull_request:
     branches:
-      - main
+      - main  # Trigger the workflow on pull requests to the main branch
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner for the job
 
     steps:
       # Step 1: Checkout the repository
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3  # This action checks out the code from the repository
 
       # Step 2: Set up dependencies
       - name: Install build dependencies
         run: |
+          echo "Step 2: Installing necessary build dependencies..."
           sudo apt update
           sudo apt install -y \
             git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev \
             gcc-multilib g++-multilib x11proto-core-dev libx11-dev \
             lib32z1-dev libgl1-mesa-dev libxml2-utils python3 python3-pip openjdk-8-jdk-headless
-          
-      # Step 3: Set up environment variables (modify as needed for your build)
+          echo "All required dependencies installed."
+
+      # Step 3: Set up environment variables for the build process
       - name: Set up environment
         run: |
-          echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" >> $GITHUB_ENV
-          echo "export PATH=$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin" >> $GITHUB_ENV
+          echo "Step 3: Setting up environment variables..."
+          echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" >> $GITHUB_ENV  # Set JAVA_HOME
+          echo "export PATH=$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin" >> $GITHUB_ENV  # Add Java to PATH
+          echo "Environment variables set up successfully."
 
       # Step 4: Run the build script
       - name: Build WTRP
         run: |
-          chmod +x build.bash
-          ./build.bash
+          echo "Step 4: Starting the build process for WTRP..."
+          chmod +x build.bash  # Make sure the build script is executable
+          ./build.bash  # Execute the build script for WTRP
+          echo "Build completed successfully."
 
-      # Step 5: Archive the build output (if applicable)
+      # Step 5: Archive the build output (recovery image, artifacts, etc.)
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3  # Action to upload the build output as an artifact
         with:
-          name: WTRP-Build
-          path: output/
+          name: WTRP-Build  # Name for the artifact
+          path: output/  # Path to the build output
+
