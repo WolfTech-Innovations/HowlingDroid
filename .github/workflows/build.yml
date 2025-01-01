@@ -23,7 +23,7 @@ jobs:
           sudo apt update
           sudo apt install -y \
             git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev \
-            gcc-multilib g++-multilib lib32ncurses5-dev x11proto-core-dev libx11-dev \
+            gcc-multilib g++-multilib x11proto-core-dev libx11-dev \
             lib32z1-dev libgl1-mesa-dev libxml2-utils python3 python3-pip openjdk-8-jdk-headless
           
       # Step 3: Set up environment variables (modify as needed for your build)
