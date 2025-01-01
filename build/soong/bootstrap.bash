@@ -7,20 +7,9 @@ export PATH=~/bin:$PATH
 curl -s https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 
-# Init repo
-repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-11
-
-# Clone my local repo
-git clone https://github.com/EinKara/android_manifest_google_bluejay.git -b twrp-13 .repo/local_manifests
-
-# Sync
-repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`sysctl -n hw.ncpu`
-
-# Build
-. build/envsetup.sh
-lunch twrp_bluejay-eng
-make bootimage
-
+echo "Syncing repos"
+repo init --depth=1 -u https://github.com/diparthshah/TWRP-manifest.git -b master
+repo sync --force-sync --no-tags --no-clone-bundle
 
 # Find and replace 'Android' with 'WTRP' in strings.xml and values.xml
 echo "Replacing 'Android' with 'WTRP' in XML files"
