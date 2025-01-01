@@ -1,3 +1,5 @@
+[![Build WTRP](https://github.com/WolfTech-Innovations/WTRP/actions/workflows/build.yml/badge.svg)](https://github.com/WolfTech-Innovations/WTRP/actions/workflows/build.yml)
+---
 # WolfTech Recovery Project (WTRP)
 
 The **WolfTech Recovery Project (WTRP)** is a custom Android recovery solution designed to provide a lightweight, efficient, and flexible recovery environment for a wide range of Android devices. It offers users a streamlined toolset for managing, repairing, and customizing their devices with precision and reliability.  
