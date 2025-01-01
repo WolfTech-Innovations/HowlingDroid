@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# *********************************************************************************************
-# WELCOME TO THE SUPER-DUPER, ULTRA-DETAILED, MEGA-EXPLANATORY **TWRP BUILD SCRIPT**
-# Powered by WolfTech Innovations — Leaders in tech innovation and digital wizardry
-# *********************************************************************************************
+# *********************************************************************************************#
+# Powered by WolfTech Innovations — Leaders in tech innovation and digital wizardry            #
+# *********************************************************************************************#
 
 # ASCII art for branding the script with WolfTech Innovations’ logo
 WOLFTECH_BRAND="********************************************
@@ -20,11 +19,6 @@ function display_header() {
     echo "$WOLFTECH_BRAND"
     echo ""
     echo "Welcome to the TWRP Build Script, powered by WolfTech Innovations!"
-    echo "In this script, we'll guide you through the entire process of:"
-    echo "- Syncing essential repositories from GitHub"
-    echo "- Modifying configuration files for your desired outcome"
-    echo "- Building TWRP recovery for the cm-12.1 branch"
-    echo "Prepare yourself for an epic journey into the world of custom recoveries!"
     echo ""
 }
 
@@ -41,7 +35,7 @@ function install_repo() {
 # Step 2: Syncing repositories
 function sync_repositories() {
     echo "Step 2: Syncing repositories..."
-    repo init --depth=1 -u https://github.com/WolfTech-Innovations/platform_manifest_twrp_aosp/
+    repo init -u git://github.com/TWRP-Mi-A2-Lite/platform_manifest_twrp_omni.git -b twrp-9.0
     echo "Repo initialization complete."
     repo sync
     echo "Repositories synchronized successfully! The source code is now on your local machine."
@@ -65,7 +59,9 @@ function auto_fix_go_files() {
 # Step 5: Selecting the target device configuration
 function select_device_configuration() {
     echo "Step 5: Selecting the target device configuration..."
-    export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_arm64-eng
+    export ALLOW_MISSING_DEPENDENCIES=true
+    build/envsetup.sh
+    lunch omni_arm64-eng
 }
 
 # Step 6: Building the recovery image
