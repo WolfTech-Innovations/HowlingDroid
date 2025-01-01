@@ -35,8 +35,8 @@ jobs:
       # Step 4: Run the build script
       - name: Build WTRP
         run: |
-          chmod +x build.sh
-          ./build.sh
+          chmod +x build.bash
+          ./build.bash
 
       # Step 5: Archive the build output (if applicable)
       - name: Upload build artifacts
