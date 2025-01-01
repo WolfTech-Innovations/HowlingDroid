@@ -33,7 +33,7 @@ function install_repo() {
 # Step 2: Syncing repositories with a stable, generic manifest
 function sync_repositories() {
     echo "Step 2: Syncing repositories..."
-    repo init -u https://github.com/marduk191/recovery_manifest.git -b zhuowei-android-6.0
+    repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_lineageos.git -b twrp-14.1
     echo "Repo initialization complete."
     repo sync --force-sync --no-tags --no-clone-bundle
     echo "Repositories synchronized successfully!"
@@ -71,7 +71,7 @@ function select_device_configuration() {
     echo "Step 6: Selecting the target device configuration..."
     export ALLOW_MISSING_DEPENDENCIES=true
     sudo ./build/envsetup.sh
-    lunch lineage_arm64-eng
+    lunch cm_arm64-eng
 }
 
 # Step 7: Building the recovery image
