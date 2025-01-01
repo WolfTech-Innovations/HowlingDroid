@@ -8,7 +8,7 @@ curl -s https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 
 echo "Syncing repos"
-repo init -u git://github.com/hejsekvojtech/twrp-manifest.git -b android-8.1
+repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
 repo sync
 
 # Find and replace 'Android' with 'WTRP' in strings.xml and values.xml
@@ -19,7 +19,11 @@ find . -type f \( -name "strings.xml" -o -name "values.xml" \) -exec sed -i 's/A
 echo "Building WTRP"
 export ALLOW_MISSING_DEPENDENCIES=true
 . build/envsetup.sh
-lunch omni_amd64-generic-eng
-mka recoveryimage
+lunch omni_generic-eng
+make recoveryimage
+mkdir output
+mv out/target/product/generic/recovery.img ./output/recovery.img
+
+
 
 echo "Done!"
