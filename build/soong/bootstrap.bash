@@ -8,8 +8,8 @@ curl -s https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 
 echo "Syncing repos"
-repo init --depth=1 -u git://github.com/hejsekvojtech/twrp-manifest.git -b android-8.1
-repo sync --force-sync --no-tags --no-clone-bundle
+repo init -u git://github.com/hejsekvojtech/twrp-manifest.git -b android-8.1
+repo sync
 
 # Find and replace 'Android' with 'WTRP' in strings.xml and values.xml
 echo "Replacing 'Android' with 'WTRP' in XML files"
